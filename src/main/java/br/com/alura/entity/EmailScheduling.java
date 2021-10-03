@@ -1,10 +1,12 @@
 package br.com.alura.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="email_scheduling")
-public class EmailScheduling {
+public class EmailScheduling implements Serializable {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
